@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiLinkService {
-  apiLink:BehaviorSubject<string>=new BehaviorSubject('http://localhost:3000')
-  constructor() { 
+  apiLink:BehaviorSubject<string>=new BehaviorSubject('https://africano-server.vercel.app')
+  constructor() {
   }
 }
