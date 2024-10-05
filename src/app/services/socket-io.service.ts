@@ -16,7 +16,7 @@ export class SocketIoService {
   newMessage$ = this.newMessageSubject.asObservable();
 
   constructor() {
-this.socket = io('https://africano-server.vercel.app', {
+this.socket = io('https://ec2-3-87-140-186.compute-1.amazonaws.com', {
   transports: ['websocket', 'polling'],  // Allow fallback to polling
   withCredentials: true,
 });
