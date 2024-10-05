@@ -16,11 +16,11 @@ export class SocketIoService {
   newMessage$ = this.newMessageSubject.asObservable();
 
   constructor() {
+this.socket = io('https://africano-server.vercel.app', {
+  transports: ['websocket', 'polling'],  // Allow fallback to polling
+  withCredentials: true,
+});
 
-    this.socket = io('wss://africano-server.vercel.app', {
-      transports: ['websocket'],
-      withCredentials: true,
-    });
     this.setupSocketListeners()
   }
   private setupSocketListeners() {
