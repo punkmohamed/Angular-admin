@@ -17,7 +17,7 @@ export class SocketIoService {
 
   constructor() {
 
-    this.socket = io('https://africano-server.vercel.app', {
+    this.socket = io('wss://africano-server.vercel.app', {
       transports: ['websocket'],
       withCredentials: true,
     });
